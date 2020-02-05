@@ -1,0 +1,20 @@
+-runfw: org.eclipse.osgi;version=3.13
+-runee: JavaSE-1.8
+-runprovidedcapabilities: ${native_capability}
+
+-resolve.effective: active
+
+-runproperties: \
+    launch.keep=false,\
+    eclipse.application=eclipse.headless.app.application
+
+-runrequires: \
+	osgi.identity;filter:='(&(osgi.identity=bndtools.runtime.applaunch.eclipse4)(version>=0.1.0))',\
+	osgi.identity;filter:='(&(osgi.identity=eclipse.headless.app)(version>=0.1.0.20170714-181245))'
+
+-runbundles: \
+	org.eclipse.equinox.app;version='[1.4.300,1.4.301)',\
+	org.eclipse.equinox.common;version='[3.10.600,3.10.601)',\
+	org.eclipse.equinox.registry;version='[3.8.600,3.8.601)',\
+	eclipse.headless.app;version=snapshot,\
+	bndtools.runtime.applaunch.eclipse4;version=snapshot

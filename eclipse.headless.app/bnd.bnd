@@ -1,0 +1,13 @@
+Bundle-SymbolicName: ${project.name};singleton:=true
+Bundle-Version: 1.0.0.${tstamp}
+
+-buildpath: \
+	org.eclipse.osgi,\
+	org.eclipse.equinox.app
+
+javac.source: 1.8
+javac.target: 1.8
+
+-privatepackage:\
+	eclipse.headless.app
+-includeresource: ./resources/
